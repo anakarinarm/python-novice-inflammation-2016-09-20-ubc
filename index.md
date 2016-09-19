@@ -54,4 +54,17 @@ To do all that, we'll have to learn a little bit about programming.
 {: .prereq}
 
 ### Getting Started
-To get started, follow the directions in the "[Setup](setup/)" tab to download data to your computer and follow any installation instructions. 
+To get started, follow the directions in the "[Setup](setup/)" tab to download data to your computer and follow any installation instructions.
+
+## [Workshop Slide-deck](extras/python_slides_2016.pdf)
+
+### [Python Syntax Reminders](commands/)
+
+### [29 Common Beginner Python Errors on One Page](http://pythonforbiologists.com/index.php/29-common-beginner-python-errors-on-one-page/)
+
+### Documentation
+
+* [Python](https://docs.python.org/)
+* [NumPy](http://docs.scipy.org/doc/numpy/reference/index.html)
+* [Matplotlib](http://matplotlib.org/contents.html)
+* [Argparse Tutorial](http://docs.python.org/dev/howto/argparse.html)
