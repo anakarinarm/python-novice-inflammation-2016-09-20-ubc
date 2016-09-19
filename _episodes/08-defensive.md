@@ -1,6 +1,6 @@
 ---
 title: Defensive Programming
-teaching: 30
+teaching: 10
 exercises: 0
 questions:
 - "How can I make my programs more reliable?"

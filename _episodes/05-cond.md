@@ -1,7 +1,7 @@
 ---
 title: Making Choices
-teaching: 30
-exercises: 0
+teaching: 15
+exercises: 5
 questions:
 - "How can my programs do different things based on data values?"
 objectives:
@@ -412,7 +412,7 @@ freeing us from having to manually examine every plot for features we've seen be
 > other_files = ['myscript.py']
 > ~~~
 > {: .python}
-> 
+>
 > > ## Solution
 > > ~~~
 > > for file in files:
@@ -422,7 +422,7 @@ freeing us from having to manually examine every plot for features we've seen be
 > >         small_files.append(file)
 > >     else:
 > >         other_files.append(file)
-> >         
+> >
 > > print(large_files)
 > > print(small_files)
 > > print(other_files)
@@ -448,7 +448,7 @@ freeing us from having to manually examine every plot for features we've seen be
 > > for char in sentence:
 > >     if char in vowels:
 > >         count += 1
-> >         
+> >
 > > print("The number of vowels in this string is " + str(count))
 > > ~~~
 > > {: .python}
