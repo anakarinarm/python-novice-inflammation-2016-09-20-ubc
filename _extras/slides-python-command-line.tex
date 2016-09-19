@@ -1,0 +1,112 @@
+% sample.tex
+\documentclass{beamer}
+
+\usetheme{boxes}
+
+\usecolortheme[RGB={34,170,34}]{structure} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{multicol}
+\usepackage{fancybox}
+
+\usepackage{framed,color}
+\definecolor{shadecolor}{rgb}{255,127,0}
+
+\definecolor{verde}{RGB}{34,170,34}
+
+
+\setbeamercolor{uppercolgreen}{fg=white,bg=verde!90}
+\setbeamercolor{lowercolgreen}{fg=black,bg=verde!20}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title[Command line Python]{Command-line programs with Python}
+
+\subtitle[]{EOAS Software Carpentry Workshop }
+\date[Sep 2015]{September 25nd, 2015}
+
+
+%------------------ the document starts here -------------------------%
+
+\begin{document}
+\bibliographystyle{plainnat}
+\bibliography{bib/biblio}
+
+
+%------------------ the titlepage frame-------- -------------------------%
+
+ 
+\begin{frame}[plain]
+  
+\titlepage
+
+
+\end{frame}
+
+
+%---------------- the presentation begins here --------------------%
+
+\begin{frame}{Command-line programs}
+
+\begin{enumerate}
+    \item{Create a Python module containing functions that can be imported into notebooks and other modules.}
+    \item{Use the values of command-line arguments in a program.}
+    \item{Read data from standard input in a program so that it can be used in a pipeline.}
+\end{enumerate}
+\end{frame}
+
+%-------------------------- Challenge 01 ------------------------------------------%
+
+
+\begin{frame}{Switching to shell commands}
+
+ \textcolor{verde}{\texttt{\$}} in front of a command that tells you to run that command in the shell rather than the Python interpreter
+%
+%\begin{figure}[htbp]
+ %  \centering
+  % \includegraphics[width=0.45\textwidth]{../figures/axis.png} 
+%\end{figure}
+
+\end{frame}
+
+%-------------------------- Challenge 01 ------------------------------------------%
+
+\begin{frame}{ }
+Write a command-line program that does addition and subtraction:
+\vspace{0.5cm}
+
+\begin{beamerboxesrounded}[upper=uppercolgreen,lower=lowercolgreen,shadow=false]{}
+\texttt{\& python arith.py add 1 2 }
+\end{beamerboxesrounded}
+
+\begin{beamerboxesrounded}[upper=uppercolgreen,lower=lowercolgreen,shadow=false]{}
+\texttt{3}
+\end{beamerboxesrounded}
+
+\begin{beamerboxesrounded}[upper=uppercolgreen,lower=lowercolgreen,shadow=false]{}
+\texttt{\& python arith.py subtract 3 4 }
+\end{beamerboxesrounded}
+
+\begin{beamerboxesrounded}[upper=uppercolgreen,lower=lowercolgreen,shadow=false]{}
+\texttt{-1}
+\end{beamerboxesrounded}
+
+
+\end{frame}
+%-------------------------- Challenge 02 ------------------------------------------%
+
+\begin{frame}{ }
+Rewrite \texttt{readings.py} so that it uses \texttt{-n, -m}, and \texttt{-x} instead of \texttt{--min, --mean}, and \texttt{--max} respectively. Is the code easier to read? Is the program easier to understand?
+
+\end{frame}
+
+%-------------------------- Challenge 03 ------------------------------------------%
+
+\begin{frame}{ }
+Separately, modify \texttt{readings.py} so that if no action is given it displays the means of the data.
+\end{frame}
+
+%-------------------------- the document ends here ----------------------------------%
+
+\end{document}
