@@ -1,7 +1,7 @@
 ---
 title: Storing Multiple Values in Lists
-teaching: 30
-exercises: 0
+teaching: 15
+exercises: 10
 questions:
 - "How can I store many values together?"
 objectives:
@@ -406,7 +406,7 @@ last: 4
 > > You can also leave out the beginning and end of the slice to take the whole string
 > > and provide only the step argument to go every second
 > > element:
-> > 
+> >
 > > ~~~
 > > beatles[::2]
 > > ~~~
@@ -482,9 +482,9 @@ Omitting ending index: ["sep", "oct", "nov", "dec"]
 > > print(left, right)
 > > ~~~
 > > {: .python}
-> > 
+> >
 > > ~~~
-> > R L 
+> > R L
 > > ~~~
 > > {: .output}
 > >
@@ -513,11 +513,11 @@ Omitting ending index: ["sep", "oct", "nov", "dec"]
 > The technical term for this is *operator overloading*:
 > a single operator, like `+` or `*`,
 > can do different things depending on what it's applied to.
-> 
+>
 > > ## Solution
-> > 
+> >
 > > The multiplication operator `*` used on a list replicates elements of the list and concatenates them together:
-> > 
+> >
 > > ~~~
 > > [2, 4, 6, 8, 10, 2, 4, 6, 8, 10]
 > > ~~~
