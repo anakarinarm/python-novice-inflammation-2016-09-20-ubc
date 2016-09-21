@@ -429,14 +429,14 @@ def fahr_to_kelvin(temp):
 \end{verbatim}
 \item
 \begin{verbatim}
-def kelvin_to_celsius(temp_k):
-    return temp_k - 273.15
+def kelvin_to_celsius(temp):
+    return temp - 273.15
 \end{verbatim}
 
 \item
 \begin{verbatim}
-def fahr_to_celsius(temp_f):
-    temp_k = fahr_to_kelvin(temp_f)
+def fahr_to_celsius(temp):
+    temp_k = fahr_to_kelvin(temp)
     result = kelvin_to_celsius(temp_k)
     return result
 \end{verbatim}
@@ -479,7 +479,6 @@ def analyze(filename):
 
 \begin{frame}[fragile]
 \frametitle{Defining a Function}
-{\small
 \begin{verbatim}
 def detect_problems(filename):
 
@@ -491,7 +490,7 @@ def detect_problems(filename):
         print('Minima add up to zero!')
     else:
         print('Seems OK!')
-\end{verbatim}}
+\end{verbatim}
 \end{frame}
 
 
@@ -499,7 +498,7 @@ def detect_problems(filename):
 \frametitle{Testing and Documentation}
 \begin{block}{Learning Goal}
 \begin{enumerate}
-\setcounter{enumi}{3}
+\setcounter{enumi}{2}
 \item    Test and debug a function.
 \end{enumerate}
 \end{block}
@@ -517,15 +516,15 @@ z = numpy.zeros((2,2))
 \end{verbatim}
 \item
 \begin{verbatim}
-print centre(z, 3)
+print(centre(z, 3))
 \end{verbatim}
 \item
 \begin{verbatim}
-print numpy.std(data) - numpy.std(centred)
+print(data.std() - centred.std())
 \end{verbatim}
 \item
 \begin{verbatim}
-def centre(data, desired):
+def center(data, desired):
   '''Return a new array containing the original data
      centered around the desired value.'''
   return (data - data.mean()) + desired
@@ -546,7 +545,7 @@ help(centre)
 \frametitle{Defining Defaults}
 \begin{block}{Learning Goals}
 \begin{enumerate}
-\setcounter{enumi}{4}
+\setcounter{enumi}{5}
 \item Set default values for function parameters.
 \end{enumerate}
 \end{block}
@@ -554,23 +553,20 @@ help(centre)
 \begin{itemize}
 \item
 \begin{verbatim}
-def center(data, desired = 0.0):
+def center(data, desired = 0):
 \end{verbatim}
 \item
 \begin{verbatim}
 def display(a=1, b=2, c=3):
-    print 'a:', a, 'b:', b, 'c:', c
-print 'no parameters:'
+    print('a:', a, 'b:', b, 'c:', c)
+print('no parameters:')
 display()
-print 'one parameter:'
+print('one parameter:')
 display(55)
-print 'two parameters:'
+print('two parameters:')
 display(55, 66)
 \end{verbatim}
-\item 
-\begin{verbatim}
-help(numpy.loadtxt)
-\end{verbatim}
+\item help(numpy.loadtxt)
 \end{itemize}
 \end{block}
 \end{frame}
@@ -603,45 +599,6 @@ def fence(original, wrapper):
        return wrapper + original + wrapper
 \end{verbatim}
 \end{block}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Readable Functions}
-\begin{block}{Function 1}
-\begin{verbatim}
-def s(p):
-    a = 0
-    for v in p:
-        a += v
-    m = a / len(p)
-    d = 0
-    for v in p:
-        d += (v - m) * (v - m)
-    return numpy.sqrt(d / (len(p) - 1))
-\end{verbatim}
-\end{block}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Readable Functions}
-{\scriptsize
-\begin{block}{Function 2}
-\begin{verbatim}
-def std_dev(sample):
-    sample_sum = 0
-    for value in sample:
-        sample_sum += value
-
-    sample_mean = sample_sum / len(sample)
-
-    sum_squared_devs = 0
-    for value in sample:
-        sum_squared_devs += (value - sample_mean) * (value - sample_mean)
-
-    return numpy.sqrt(sum_squared_devs / (len(sample) - 1))
-\end{verbatim}
-\end{block} }
-
 \end{frame}
 
 
